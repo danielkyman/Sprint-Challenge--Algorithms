@@ -94,6 +94,34 @@ class SortingRobot:
         """
         return self._light == "ON"
 
+    # def merge_in_place(self, start, mid, end):
+    #     # Your code here
+    #     start2 = mid
+    #     while start <= mid and start2 <= end:
+    #         if self._list[start] <= self._list[start2]:
+    #             start += 1
+    #         else:
+    #             index = start2
+    #             value = self._list[start2]
+    #             while index is not start:
+    #                 self._list[index] = self._list[index - 1]
+    #                 index -= 1
+    #             self._list[start] = value
+    #             start += 1
+    #             mid += 1
+    #             start2 += 1
+    #     # return self._list
+
+    # def merge_sort_in_place(self, l, r):
+    #     # Your code here
+    #     if r - l < 1:
+    #         return self._list
+    #     else:
+    #         m = (l + r) // 2
+    #         self.merge_sort_in_place(l, m)
+    #         self.merge_sort_in_place(m + 1, r)
+    #         return self.merge_in_place(l, m+1, r)
+
     def sort(self):
         """
         Sort the robot's list.
@@ -125,6 +153,8 @@ class SortingRobot:
 
         self.move_right()
         self.sort()
+
+        # self.merge_sort_in_place(0, len(self._list) - 1)
 
 
 if __name__ == "__main__":
